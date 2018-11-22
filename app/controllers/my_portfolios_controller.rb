@@ -1,7 +1,7 @@
 class MyPortfoliosController < ApplicationController
 
   def index
-    @portfolio_items = MyPortfolio.all
+      @portfolio_items = MyPortfolio.all
   end
 
   def show
@@ -10,10 +10,11 @@ class MyPortfoliosController < ApplicationController
 
   def new
     @portfolio_item = MyPortfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_item = MyPortfolio.new(params.require(:my_portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = MyPortfolio.new(params.require(:my_portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
