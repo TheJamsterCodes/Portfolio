@@ -4,10 +4,6 @@ class MyPortfoliosController < ApplicationController
       @portfolio_items = MyPortfolio.all
   end
 
-  def show
-      
-  end
-
   def new
     @portfolio_item = MyPortfolio.new
     3.times { @portfolio_item.technologies.build }
