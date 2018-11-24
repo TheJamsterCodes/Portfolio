@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rubocop', '~> 0.60.0', require: false
 
 gem 'friendly_id', '~> 5.2.0'
+
+gem 'devise', '~> 4.5'
