@@ -6,15 +6,15 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Date</th>
+      <th>Topic</th>
       <th>Body</th>
       <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @blogs.each do |blog| %>
       <%= render @blogs %>
-    <% end %>
   </tbody>
 </table>
 

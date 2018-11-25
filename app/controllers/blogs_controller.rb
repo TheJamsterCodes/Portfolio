@@ -59,6 +59,7 @@ class BlogsController < ApplicationController
     end
   end
 
+  # Using enums in Blog model
   def toggle_status
     if @blog.draft?
       @blog.published!
@@ -76,6 +77,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id)
     end
 end
