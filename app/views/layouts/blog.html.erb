@@ -59,14 +59,14 @@
 
           <%= render @blogs %>
 
-          <%= render 'shared/blog_sidebar', class: 'col-md-4 blog-sidebar' %>
-
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
         </div>
+
+        <%= render 'shared/blog_sidebar' %>
 
       </div>
 
