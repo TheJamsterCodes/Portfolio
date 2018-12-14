@@ -66,3 +66,5 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'

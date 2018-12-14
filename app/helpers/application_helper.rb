@@ -15,4 +15,8 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    # create using self-generated gem
+  end
+
 end
