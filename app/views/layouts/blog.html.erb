@@ -56,13 +56,11 @@
             Blogs
           </h3>
           <p>Write a New Blog</p>
-
+          <%= paginate @blog %>
+          
           <%= render @blog %>
 
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav>
+          <%= paginate @blog %>
 
         </div>
 
