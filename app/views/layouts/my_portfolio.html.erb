@@ -20,7 +20,7 @@
 
     <main role="main">
 
-    <%= render 'shared/myportfolio_masthead' %>
+    <%= render 'shared/myportfolio_masthead' unless logged_in?(:site_admin) %>
     
     <%= yield %>
 
@@ -30,7 +30,5 @@
 
     <%= source_helper %>
 
-    
-    
   </body>
 </html>
