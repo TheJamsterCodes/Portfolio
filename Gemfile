@@ -65,6 +65,8 @@ gem 'bootstrap', '~> 4.1.3'
 
 gem 'jquery-rails'
 
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+
 gem 'webpacker'
 
 gem 'petergate', '~> 2.0', '>= 2.0.1'
