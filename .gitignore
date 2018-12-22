@@ -30,3 +30,11 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore Byebug command history file.
+.byebug_history
+
+# I don't want to show my secrets.
+/config/secrets.yml
+.env
+

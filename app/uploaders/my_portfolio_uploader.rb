@@ -1,5 +1,4 @@
 class MyPortfolioUploader < CarrierWave::Uploader::Base
-
   storage :file
 
   # Override the directory where uploaded files will be stored.
