@@ -6,6 +6,9 @@ class MyPortfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  mount_uploader :thumb_image, MyPortfolioUploader
+  mount_uploader :main_image, MyPortfolioUploader
+
   def self.by_position
     order('position ASC')
   end
