@@ -9,7 +9,7 @@ class MyPortfoliosController < ApplicationController
 
   def sort
     params[:order].each do |key, value|
-      Portfolio.find(value[:id]).update(position: value[:position])
+      MyPortfolio.find(value[:id]).update(position: value[:position])
     end
 
     render nothing: true
