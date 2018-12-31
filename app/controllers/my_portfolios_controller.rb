@@ -17,7 +17,6 @@ class MyPortfoliosController < ApplicationController
 
   def new
     @portfolio_item = MyPortfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -67,7 +66,7 @@ class MyPortfoliosController < ApplicationController
                                       :body,
                                       :main_image,
                                       :thumb_image, 
-                                      technologies_attributes: [:name]
+                                      technologies_attributes: [:name, :_destroy]
                                      )
   end
 
