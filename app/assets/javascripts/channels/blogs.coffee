@@ -5,18 +5,21 @@ jQuery(document).on 'turbolinks:load', ->
       channel: "BlogsChannel"
       blog_id: comments.data('blog-id')
     },
-    connect: -> # Called when the subscription is ready for use on the server.
+    connected: -> # Called when the subscription is ready for use on the server.
     disconnected: -> # Called when the subsription has been terminated by the server.
     received: (data) -> # Called when there's incoming data on the websocket for this channel.
       comments.append data['comment']
     send_comment: (comment, blog_id) ->
-      @perform 'send_comment', comment: comment_blog_id: blog_id
-  $('#new_commment').submit (event) ->
+      @perform 'send_comment', comment: comment, blog_id: blog_id
+  $('#new_commment').submit (e) ->
     $this = $(this) #creating a instance to work with to work with the  data
     textarea = $this.find('#comment_content')
-    if $.trim(textarea.val()).lenght > 1 #trim method removes excess whitespace
-      App.global_chat.send_comment(textarea.val()),
+    if $.trim(textarea.val()).length > 1 #trim method removes excess whitespace
+      App.global_chat.send_comment textarea.val(),
       comments.data('blog-id')
       textarea.val('')
-    event.preventDefault()
-      return false
+    e.preventDefault()
+    return false
+
+
+
